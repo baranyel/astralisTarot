@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0b10" />
+    <title>%ASTRALIS_TITLE%</title>
+    <meta name="description" content="%ASTRALIS_DESCRIPTION%" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:title" content="%ASTRALIS_TITLE%" />
+    <meta property="og:description" content="%ASTRALIS_DESCRIPTION%" />
+    <meta property="og:image" content="%ASTRALIS_OG%" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="%ASTRALIS_BRAND% gök atlası ve altın gravürlü üç tarot kartı" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/art/sky.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+    <link rel="preload" href="/art/sun.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/art/moon.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/art/star.svg" as="image" type="image/svg+xml" />
+  </head>
+  <body>
+    <div id="veil" role="dialog" aria-modal="true" aria-label="Gök atlasını aç" hidden>
+      <button id="enter" type="button"><i aria-hidden="true"></i><span></span></button>
+    </div>
+    <div id="experience">
+      <a class="skip" href="#kartlar">Kart seçimine geç</a>
+      <header class="masthead">
+        <a class="brand" href="#gokyuzu" aria-label="%ASTRALIS_BRAND% · Başlangıç"
+          ><img src="/favicon.svg" alt="" width="36" height="36" /><span data-brand></span
+        ></a>
+        <nav id="nav" aria-label="Ana menü">
+          <a href="#gokyuzu" aria-current="location">Gökyüzü</a><a href="#kartlar">Açılımlar</a
+          ><a href="#hakkinda">Hakkında</a><a href="#iletisim">İletişim</a>
+        </nav>
+        <div class="tools">
+          <button id="sound" type="button" aria-label="Sesi aç" aria-pressed="false">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span
+            ><span class="sound-label">Ses kapalı</span>
+          </button>
+          <button
+            id="menu"
+            type="button"
+            aria-label="Menüyü aç"
+            aria-controls="nav"
+            aria-expanded="false"
+          >
+            <i></i><i></i>
+          </button>
+        </div>
+      </header>
+      <main>
+        <div class="journey" id="gokyuzu">
+          <div class="sky-window">
+            <div id="stars" aria-hidden="true"></div>
+            <i class="meteor" aria-hidden="true"></i>
+            <svg
+              class="constellations"
+              viewBox="0 0 1400 800"
+              preserveAspectRatio="xMidYMid slice"
+              aria-hidden="true"
+            >
+              <g class="connect">
+                <path
+                  d="M35 197l54-48 39 6 49-64 47 11 23-47M56 638l54-25 25-55 68-11M416 63l25 36 53-12 33 49M1182 650l52 26 46-39 55 13 33-47"
+                />
+                <path class="a-const" d="M341 582l34-65 42 63m-59-24 43 1" />
+              </g>
+              <g class="points"></g>
+            </svg>
+            <div class="hero-body">
+              <div class="sky-copy">
+                <div class="kicker">
+                  <span class="short-rule"></span> GÖK ATLASI <span class="sep">/</span> LEVHA I
+                </div>
+                <h1 class="wordmark">
+                  <i class="brand-star" aria-hidden="true"></i><span id="word"></span>
+                </h1>
+                <p class="motto"><span></span> <em></em></p>
+                <a class="button primary" href="#kartlar"
+                  ><span class="spark-icon" aria-hidden="true">✧</span> Kartını seç
+                  <span class="long-arrow" aria-hidden="true">⟶</span></a
+                >
+              </div>
+              <div class="deck-copy" inert aria-hidden="true">
+                <div class="kicker">
+                  <span class="short-rule"></span> GÖK ATLASI <span class="sep">/</span> LEVHA II
+                </div>
+                <h2><span>Bir deste,</span><em>bin ihtimal.</em></h2>
+                <p>Kartlar bir araya gelir.<br />İçlerinden biri seni bekler.</p>
+                <a class="text-link" href="#kartlar"
+                  >Açılımlara geç <span aria-hidden="true">⟶</span></a
+                >
+              </div>
+              <div class="illustration" aria-hidden="true">
+                <div class="chart-underlay"></div>
+                <div class="hero-orbits"><img src="/art/orbits.svg" alt="" /></div>
+                <div class="orbital-deck"></div>
+                <div class="plate-note"><span></span> FİG. 01 <b>/</b> ARKANA</div>
+              </div>
+            </div>
+            <div class="hero-foot">
+              <span>TAROT <b>·</b> SEZGİ <b>·</b> YILDIZLAR</span
+              ><a href="#deste" class="scroll-cue">KAYDIR <i aria-hidden="true"></i></a
+              ><span class="sheet-num">N° I</span>
+            </div>
+          </div>
+          <div id="deste" class="deck-marker"></div>
+        </div>
+        <section id="kartlar" class="selection section-edge" aria-labelledby="choose-title">
+          <div class="section-inner">
+            <div class="kicker">
+              <span class="short-rule"></span> LEVHA III <span class="sep">/</span> AÇILIMLAR
+            </div>
+            <div class="selection-heading">
+              <h2 id="choose-title">Kartını <em>seç.</em></h2>
+              <p>Bir kart seç, ardındaki <br />açılımı keşfet.</p>
+            </div>
+            <div class="selection-stage" data-state="FAN_READY">
+              <div class="fan-orbit" aria-hidden="true"></div>
+              <div class="fan" role="group" aria-label="Açılım kartları"></div>
+              <article class="reveal" hidden tabindex="-1"></article>
+            </div>
+            <div class="fan-controls">
+              <button class="circle-button prev" aria-label="Önceki kart">←</button
+              ><span class="fan-position" aria-live="polite"></span
+              ><button class="circle-button next" aria-label="Sonraki kart">→</button>
+            </div>
+          </div>
+        </section>
+        <section id="hakkinda" class="about section-edge" aria-labelledby="about-title">
+          <div class="section-inner about-grid">
+            <figure class="arch">
+              <div class="chart-arch">
+                <img width="480" height="480" src="/art/astrolabe.svg" alt="" loading="lazy" />
+              </div>
+              <figcaption><span>FİG. 02</span><span>GÖK KÜRESİ</span></figcaption>
+            </figure>
+            <div class="about-copy">
+              <div class="kicker">
+                <span class="short-rule"></span> LEVHA IV <span class="sep">/</span> HAKKINDA
+              </div>
+              <h2 id="about-title"></h2>
+              <p class="about-text"></p>
+              <small class="draft" hidden>Tanıtım metni · Taslak</small>
+              <div
+                class="moon-phases"
+                role="img"
+                aria-label="Yeni aydan başlayarak Ay’ın sekiz evresi"
+              ></div>
+            </div>
+          </div>
+        </section>
+        <section id="surec" class="process section-edge" aria-labelledby="process-title">
+          <div class="section-inner">
+            <div class="kicker">
+              <span class="short-rule"></span> LEVHA V <span class="sep">/</span> SÜREÇ
+            </div>
+            <h2 id="process-title">Açılımın <em>yolu.</em></h2>
+            <div class="route">
+              <svg aria-hidden="true" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <path class="route-track" d="M0 80 500 16 1000 68" />
+                <path class="route-draw" pathLength="1" d="M0 80 500 16 1000 68" />
+              </svg>
+              <ol>
+                <li>
+                  <i></i><small>I</small>
+                  <h3>%ASTRALIS_STEP_1%</h3>
+                </li>
+                <li>
+                  <i></i><small>II</small>
+                  <h3>%ASTRALIS_STEP_2%</h3>
+                </li>
+                <li>
+                  <i></i><small>III</small>
+                  <h3>%ASTRALIS_STEP_3%</h3>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section id="iletisim" class="finale section-edge" aria-labelledby="final-title">
+          <div class="kicker">
+            <span class="short-rule"></span> LEVHA VI <span class="sep">/</span> İLETİŞİM
+            <span class="short-rule"></span>
+          </div>
+          <div class="final-plate">
+            <img
+              width="760"
+              height="700"
+              class="final-orbit"
+              src="/art/orbits.svg"
+              loading="lazy"
+              alt=""
+            />
+            <div class="foil">
+              <img
+                src="/art/finale.svg"
+                width="210"
+                height="340"
+                loading="lazy"
+                alt="Altın işlemeli son kart"
+              /><canvas aria-hidden="true"></canvas>
+            </div>
+          </div>
+          <h2 id="final-title">Son <em>kart.</em></h2>
+          <div class="final-actions"></div>
+        </section>
+      </main>
+      <footer>
+        <a class="brand" href="#gokyuzu"
+          ><img src="/favicon.svg" width="26" height="26" alt="" /><span data-brand></span></a
+        ><a class="to-top" href="#gokyuzu">BAŞA DÖN ↑</a>
+      </footer>
+    </div>
+    <div id="dust" aria-hidden="true"></div>
+    <noscript
+      ><p>
+        %ASTRALIS_TITLE%. Kartları keşfetmek için tarayıcınızda JavaScript’i etkinleştirin.
+      </p></noscript
+    >
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
